@@ -1,0 +1,119 @@
+#admin{
+	padding: 0;
+	margin: 0;
+	color:#fff;
+	background-color:#fff;
+	font-family: 'amaranthRegular', sans-serif;
+}
+
+#top-sidebar{
+	background-color:#186b05;
+}
+
+#top-content{
+	background-color:#338908;
+}
+
+#top-content, #top-sidebar{
+	min-height:60px;
+}
+
+
+#top-content img{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#top-sidebar img{
+	max-width:160px;
+	height:auto;
+}
+
+.status img{
+	max-width:45px;
+	height:auto;
+}
+
+#top-sidebar h4{
+	margin-top: 0;
+}
+
+#adim-sidebar{
+	background-color: #092B02;
+	height:100%;
+	min-height:800px;
+}
+
+#adim-sidebar img{
+	max-width:45px;
+	height:auto;
+}
+
+#accordion .panel-heading{
+	background-color:#1E3F17;
+}
+
+ .panel-default{
+	background-color:#092B02;
+	border-color: #092B02;
+}
+
+.panel-title{
+	color:#add1a5;
+}
+.panel-title a{
+	color:#add1a5;
+	font-family: 'amaranthRegular', sans-serif;
+}
+
+#accordion .panel-body{
+	background-color:#092B02;
+}
+
+.panel-body .nav a{
+	font-family: 'amaranthRegular', sans-serif;
+	color:#add1a5;
+}
+
+.panel-body .nav a:hover{
+	background-color:#092B02;
+}
+
+
+#admin-main-content{
+	background-color:#B7D3AD;
+	height:100%;
+	min-height:800px;
+}
+
+
+
+/* Login Styling starts here */
+.login-form{
+	background-color:#fff;
+	padding:20px;
+	margin-top:15px;
+	border-radius:10px;
+}
+
+.login-logo{
+	margin-top:100px;
+}
+
+.login-logo img{
+	max-width:250px;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+
+.page-title h1{
+	margin-top:0;
+	color:#186b05;
+}
+
+.btn-success{
+	background-color:#338908;
+	border-color:#338908;
+}
+/* Login Styling ends here */

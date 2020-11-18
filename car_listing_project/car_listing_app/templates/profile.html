@@ -1,0 +1,110 @@
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** Cars Starts ***** -->
+<section class="section" id="trainers">
+  <div class="container">
+      
+      <div class="row">
+        <div class="col-lg-3">
+          {% include 'sidebar.html'%}
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+              <div class="col-lg-12 mb-3 text-center">
+                <h1><span style="color: #ed563b;">Uploaded</span> Cars({{total_all}})</h1>
+              </div>
+          </div>  
+          <div class="row"> 
+            {% for product in all %}
+            <div class="col-lg-4">
+                <div class="trainer-item">
+                    <div class="image-thumb">
+                        <img src="{{product.car_image.url}}" alt="">
+                    </div>
+                    <div class="down-content">
+                        <h2 style="color: #ed563b;">{{product.car_price}}</h2>
+                        <h4>{{product.car_name}}-{{product.car_model}}</h4>
+  
+                        <p>
+                            <i class="fa fa-dashboard"></i> {{product.car_speed}} &nbsp;&nbsp;&nbsp;
+                            <i class="fa fa-cog"></i> {{product.car_type}} &nbsp;&nbsp;&nbsp;
+                        </p>
+  
+                        <ul class="social-icons">
+                            <li><a href="car-details.html">+ View Car</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="row">
+            <div class="col-lg-12 mb-3 text-center">
+              <h1><span style="color: #ed563b;">Foreign</span> Cars({{total_foreign}})</h1>
+            </div>
+        </div>  
+        <div class="row"> 
+          {% for forex in foreign %}
+          <div class="col-lg-4">
+              <div class="trainer-item">
+                  <div class="image-thumb">
+                      <img src="{{forex.car_image.url}}" alt="">
+                  </div>
+                  <div class="down-content">
+                    <h2 style="color: #ed563b;">{{forex.car_price}}</h2>
+                      <h4>{{forex.car_name}}-{{forex.car_model}}</h4>
+                      <p>
+                          <i class="fa fa-dashboard"></i> {{forex.car_speed}} &nbsp;&nbsp;&nbsp;
+                          <i class="fa fa-cog"></i> {{forex.car_type}} &nbsp;&nbsp;&nbsp;
+                      </p>
+
+                      <ul class="social-icons">
+                          <li><a href="car-details.html">+ View Car</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mb-3 text-center">
+              <h1><span style="color: #ed563b;">Local</span> Cars({{total_local}})</h1>
+            </div>
+        </div>  
+        <div class="row"> 
+          {% for forex in local %}
+          <div class="col-lg-4">
+              <div class="trainer-item">
+                  <div class="image-thumb">
+                      <img src="{{forex.car_image.url}}" alt="">
+                  </div>
+                  <div class="down-content">
+                    <h2 style="color: #ed563b;">{{forex.car_price}}</h2>
+                      <h4>{{forex.car_name}}-{{forex.car_model}}</h4>
+
+                      <p>
+                          <i class="fa fa-dashboard"></i> {{forex.car_speed}} &nbsp;&nbsp;&nbsp;
+                          <i class="fa fa-cog"></i> {{forex.car_type}} &nbsp;&nbsp;&nbsp;
+                      </p>
+
+                      <ul class="social-icons">
+                          <li><a href="car-details.html">+ View Car</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        {% endfor %}
+        </div>
+        </div> 
+      </div>
+
+      <br>
+  </div>
+</section>
+<!-- ***** Cars Ends ***** -->
+
+
+{% endblock%}

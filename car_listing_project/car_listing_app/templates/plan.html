@@ -1,0 +1,44 @@
+{% extends 'main.html'%}
+{% load static %}
+{% block content %}
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** Cars Starts ***** -->
+<section class="section" id="trainers">
+  <div class="container">
+      
+      <div class="row">
+        <div class="col-lg-3">
+          {% include 'sidebar.html'%}
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+              <div class="col-lg-12 mb-3 text-center">
+                <h1><span style="color: #ed563b;">Choose</span> Plan</h1>
+              </div>
+          </div>  
+          <div class="row"> 
+            {% for product in plan %}
+            <div class="col-lg-4">
+                <div class="trainer-item">
+                    <div class="down-content">
+                        <h3>{{product.plan_name}}</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque omnis odio eveniet deleniti nostrum ullam exercitationem cupiditate, corporis cum maiores.</p>
+                        <ul class="social-icons">
+                            <li><button style="background-color: #ed563b;" class="btn" href="car-details.html">pick</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div> 
+      </div>
+
+      <br>
+  </div>
+</section>
+<!-- ***** Cars Ends ***** -->
+
+
+{% endblock%}
