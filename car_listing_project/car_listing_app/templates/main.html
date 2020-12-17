@@ -44,30 +44,31 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Car Dealer<em> Website</em></a>
+                        <a href="{% url 'home' %}" class="logo">Car Dealer<em> Website</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="cars.html">Cars</a></li>
+                            <li><a href="{% url 'home' %}" class="active">Home</a></li>
+                            <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                            <li><a href="{% url 'cars' %}">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="team.html">Team</a>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="terms.html">Terms</a>
+                                    <a class="dropdown-item" href="{% url 'about-us' %}">About Us</a>
+                                    <a class="dropdown-item" href="{% url 'blog' %}">Blog</a>
+                                    <a class="dropdown-item" href="{% url 'team' %}">Team</a>
+                                    <a class="dropdown-item" href="{% url 'testimonial' %}">Testimonials</a>
+                                    <a class="dropdown-item" href="{% url 'faq' %}">FAQ</a>
+                                    <a class="dropdown-item" href="{% url 'terms' %}">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="contact.html">Contact</a></li> 
+                            <li><a href="{% url 'contact' %}">Contact</a></li> 
                             {% if user.is_authenticated %}
                             <li><a data-toggle="modal" data-target="#logout">Logout</a></li>
                             {% else%}
                             <li><a  data-toggle="modal" data-target="#myModal">Login</a></li>
-                            <li><a href="contact.html">Register</a></li>
+                            <li><a data-toggle="modal" data-target="#register">Register</a></li>
                             {% endif %}
                         </ul>        
                         <a class='menu-trigger'>
@@ -106,6 +107,28 @@
           </div>
         </div>
       </div>
+
+      <div id="register" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Registrations Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                    {{form|crispy}}
+                      <button style="background-color: #ed563b;" class="btn btn-block">register</button>
+                    {% csrf_token%}
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
       <div id="logout" class="modal fade" tabindex="-1">
         <div class="modal-dialog">
@@ -165,4 +188,5 @@
     <script src="{% static 'assets/js/custom.js' %}"></script>
 
   </body>
+  {% block custom_js%}{% endblock%}
 </html>

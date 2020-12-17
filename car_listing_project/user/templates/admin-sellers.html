@@ -1,0 +1,51 @@
+{% extends 'admin-main.html'%}
+{% load static %}
+{% block content %}
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** Cars Starts ***** -->
+<section class="section" id="trainers">
+  <div class="container">
+      
+      <div class="row">
+        <div class="col-lg-3">
+          {% include 'admin-sidebar.html'%}
+        </div>
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-12" id="welcome">
+              <table class="table">
+                <thead>
+                  <tr>
+                    
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for users in user %}
+                  <tr>
+                    <td>{{users.username}}</td>
+                    <td>{{users.email}}</td>
+                    {% if users.is_active %}
+                    <td><a href="{% url 'ban_seller' users.id %}">Ban Seller</a></td>
+                    {% else %}
+                    <td><a href="{% url 'remove_ban' users.id %}">Remove Ban</a></td>
+                    {% endif %}                    
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <br>
+  </div>
+</section>
+<!-- ***** Cars Ends ***** -->
+
+
+{% endblock%}

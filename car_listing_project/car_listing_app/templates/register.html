@@ -1,0 +1,86 @@
+{% extends 'main.html'%}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content%}
+<div class="container">
+    <div class="row">
+<div class="col-md-12">
+    <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Register Page</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="POST">
+            <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+              </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="text" class="form-control" id="username" placeholder="Enter email" name="username">
+                </div>
+            </div>
+            <div class="card-footer"> 
+                <div class="form-group">  
+            <button id="register-btn" style="background-color: #ed563b;" class="btn btn-block">Register</button>
+        </div>
+            <div id="plan_data"></div>
+            <div id="move_to_login"></div>
+        </div>
+        </form>
+            
+      </div>
+</div>
+</div>
+</div>
+{% endblock%} 
+{% block custom_js%}
+<!-- <script>
+    $(document).ready(function(){
+        $("#register-btn").click(function(e){
+            e.preventDefault();        
+            $.ajax({
+                url:"{% url 'register_plan' %}",
+                type:'POST',
+                data:{data:""}
+            }).done((response) => {
+                console.log(response)
+                let json_data = JSON.parse(response);
+                let div_data = "<h3 class=' text-center mb-2'> Choose A Plan </h3><div class='row'>"
+                for(key in json_data){
+                    div_data += "<div class='col-lg-4'><div class='card' ><div class='card-body'><h4 class='card-title text-center'>"+json_data[key]['plan_name']+"</h4><p class='card-text' >"+json_data[key]['plan_desc']+"</p><button  name='pick' value="+json_data[key]['id']+" class='btn btn-primary'>Pick</button></div></div></div>"
+                } 
+                $('#plan_data').html(div_data)   
+            }).fail(() => {
+                alert("could not work")
+            })
+
+            $(document).on('click',"button[name='pick']",function(e){
+                e.preventDefault();
+                let email = $("#email").val();
+            let username = $("#username").val();
+            let password = $("#password").val();
+                 let picked = $(this).val()
+                 $.ajax({
+                url:"{% url 'plan_save' %}",
+                type:'POST',
+                data:{picked:picked,email:email,username:username,password:password}
+            }).done((response) => {
+                console.log(response);
+                let move_data = "<div class='form-group' ><a class='btn btn-block btn-primary mt-3' href='{% url 'home' %}' >Done</a></div>"
+                $('#move_to_login').html(move_data);
+            }).fail(() => {
+                alert("could not work")
+            })  
+                })
+        })
+
+    })
+</script> -->
+{% endblock%} 

@@ -12,5 +12,9 @@ class UserRegisterForm(UserCreationForm):
 class SellerProductForm(forms.ModelForm):
     class Meta:
         model = Seller_Product
-        fields = ['car_name','car_model','car_image','car_owner','car_owner_location','car_price','car_speed','car_type','car_year','area_cat']
+        fields = ['car_name','car_model','car_image_front','car_image_top','car_image_side','car_image_back','car_owner','car_owner_location','car_price','car_features','car_description','car_type','car_year','area_category']
 
+class UpdateProductForm(forms.ModelForm):
+    class Meta:
+        model = Seller_Product
+        fields = ['car_name','car_model','car_image_front','car_image_top','car_image_side','car_image_back','car_owner','car_owner_location','car_price','car_features','car_description','car_type','car_year','area_category']

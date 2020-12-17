@@ -8,10 +8,7 @@
   <div class="container">
       
       <div class="row">
-        <div class="col-lg-3">
-          {% include 'sidebar.html'%}
-        </div>
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <div class="row">
               <div class="col-lg-12 mb-3 text-center">
                 <h1><span style="color: #ed563b;">Choose</span> Plan</h1>
@@ -25,7 +22,7 @@
                         <h3>{{product.plan_name}}</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque omnis odio eveniet deleniti nostrum ullam exercitationem cupiditate, corporis cum maiores.</p>
                         <ul class="social-icons">
-                            <li><button style="background-color: #ed563b;" class="btn" href="car-details.html">pick</button></li>
+                            <li><a style="background-color: #ed563b;" type="button" class="btn" href="{% url 'user_plan1' product.id %}">pick</a></li>
                         </ul>
                     </div>
                 </div>
