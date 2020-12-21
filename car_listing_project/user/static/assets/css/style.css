@@ -181,15 +181,15 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #232d39!important;
+  color: lightgreen;
 }
 
 .background-header .main-nav .nav li:hover > a {
-  color: #ed563b!important;
+  color: lightgreen
 }
 
 .background-header .nav li a.active {
-  color: #ed563b!important;
+  color: lightgreen
 }
 
 .header-area {
@@ -213,7 +213,7 @@ header
 
 .header-area .main-nav .logo {
   line-height: 80px;
-  color: #fff;
+  color: lightgreen;
   font-size: 32px;
   font-weight: 800;
   text-transform: uppercase;
@@ -226,7 +226,7 @@ header
 
 .header-area .main-nav .logo em {
   font-style: normal;
-  color: #ed563b;
+  color: lightgreen;
   font-weight: 900;
 }
 
@@ -252,7 +252,7 @@ header
   display: block;
   font-weight: 500;
   font-size: 13px;
-  color: #7a7a7a;
+  color: lightgreen;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -265,18 +265,18 @@ header
 }
 
 .header-area .main-nav .nav li a {
-  color: #fff;
+  color: lightgreen;
 }
 
 .header-area .main-nav .nav li:hover > a,
 .header-area .main-nav .nav li > a.active {
-  color: #ed563b!important;
+  color: lightgreen;
   opacity: 1;
 }
 
 .background-header .main-nav .nav li:hover > a,
 .background-header .main-nav .nav li > a.active {
-  color: #ed563b!important;
+  color: lightgreen;
   opacity: 1;
 }
 
@@ -400,7 +400,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #ed563b;
+  color: lightgreen;
 }
 
 @media (max-width: 1200px) {
@@ -415,11 +415,11 @@ header
 
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
-    color: #1e1e1e;
+    color: lightgreen;
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #ed563b!important;
+    color: lightgreen;
     opacity: 1;
   }
   .header-area {
@@ -456,7 +456,7 @@ header
   }
   .header-area .main-nav .nav li:last-child {
     width: 100%;
-    background-color: #ed563b;
+    color: lightgreen;
     color: #fff;
   }
 
@@ -465,7 +465,7 @@ header
   }
   .header-area .main-nav .nav li {
     width: 100%;
-    background: #fff;
+    color: lightgreen;
     border-bottom: 1px solid #eee;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -476,11 +476,11 @@ header
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #232d39 !important;
+    color: lightgreen;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #ed563b!important;
+    color: lightgreen;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;

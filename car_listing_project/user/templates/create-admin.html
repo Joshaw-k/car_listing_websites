@@ -1,9 +1,24 @@
-{% extends 'main.html'%}
+{% extends 'admin-main.html'%}
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 <!-- ***** Main Banner Area End ***** -->
-
+<div style="background-color: rgba(35,45,57,0.8);">
+  <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2><em style="color: lightgreen">Create Admin</em></h2>
+                    <p style="color:rgba(35,45,57,0.8);" ><b>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
 <!-- ***** Cars Starts ***** -->
 <section class="section" id="trainers">
   <div class="container">
@@ -20,7 +35,7 @@
                     {{form|crispy}}
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Create Admin</button>
+                    <button type="submit" style="background-color: lightgreen" class="btn">Create Admin</button>
                   </div>
                   {% csrf_token %}
               </form>
@@ -32,6 +47,7 @@
       <br>
   </div>
 </section>
+</div>
 <!-- ***** Cars Ends ***** -->
 
 

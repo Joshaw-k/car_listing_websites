@@ -639,7 +639,7 @@ subscribe
 */
 
 #call-to-action {
-  padding: 120px 0px;
+  padding: 70px 0px 60px 0px;
   background-image: url(../images/cta-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -801,7 +801,7 @@ schedule
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(35,45,57,0.8);
+  
 }
 
 .section-bg > form,
@@ -912,7 +912,7 @@ trainers
 
 #trainers { 
   padding-bottom: 90px; 
-  margin-top: 130px;
+  margin-top: 30px;
 }
 
 #trainers .trainer-item {

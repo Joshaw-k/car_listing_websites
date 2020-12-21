@@ -2,6 +2,21 @@
 {% load static %}
 {% block content %}
 <!-- ***** Main Banner Area End ***** -->
+<div style="background-color: rgba(35,45,57,0.8);">
+<section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+              <div class="cta-content">
+                  <br>
+                  <br>
+                  <h2><em>Plan Page</em></h2>
+                  <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
 <!-- ***** Cars Starts ***** -->
 <section class="section" id="trainers">
@@ -14,8 +29,8 @@
         <div class="col-lg-9">
           <div class="row">
               <div class="col-lg-12 mb-3 text-center">
-                <h1 class="mb-5"><span style="color: #ed563b;">Choose</span> Plan</h1>
-                <h3>You Are Currently On A <span style="color: #ed563b;">{{user_plan.user_plan_name}}</span> Plan *</h3>
+                <h1 class="mb-5" style="color: #fff;"><span style="color: #ed563b;"><b>Choose</b> </span><b>Monthly Plan</b></h1>
+                
               </div>
           </div>  
           <div class="row"> 
@@ -23,8 +38,8 @@
             <div class="col-lg-4">
                 <div class="trainer-item">
                     <div class="down-content">
-                        <h3>{{product.plan_name}}</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque omnis odio eveniet deleniti nostrum ullam exercitationem cupiditate, corporis cum maiores.</p>
+                        <h3><b>{{product.plan_name}}</b></h3><hr>
+                        <p style="color: #000;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque omnis odio eveniet deleniti nostrum ullam exercitationem cupiditate, corporis cum maiores.</p>
                         <ul class="social-icons">
                             <li><a style="background-color: #ed563b;" type="button" class="btn" href="{% url 'user_plan' product.id %}">pick</a></li>
                         </ul>
@@ -39,6 +54,7 @@
       <br>
   </div>
 </section>
+</div>
 <!-- ***** Cars Ends ***** -->
 
 

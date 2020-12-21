@@ -2,8 +2,22 @@
 {% load static %}
 {% block content %}
 <!-- ***** Main Banner Area End ***** -->
-
-<!-- ***** Cars Starts ***** -->
+<div style="background-color: rgba(35,45,57,0.8);">
+  <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2><em style="color: lightgreen">Dashboard</em></h2>
+                    <p style="color:rgba(35,45,57,0.8);" ><b>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- ***** Cars Starts ***** -->
 <section class="section" id="trainers">
   <div class="container">
       
@@ -29,9 +43,9 @@
                     <td>{{users.username}}</td>
                     <td>{{users.email}}</td>
                     {% if users.is_active %}
-                    <td><a href="{% url 'ban_seller' users.id %}">Ban Seller</a></td>
+                    <td><a style="color:lightgreen;" href="{% url 'ban_seller' users.id %}">Ban Seller</a></td>
                     {% else %}
-                    <td><a href="{% url 'remove_ban' users.id %}">Remove Ban</a></td>
+                    <td><a style="color:lightgreen;" href="{% url 'remove_ban' users.id %}">Remove Ban</a></td>
                     {% endif %}                    
                   </tr>
                   {% endfor %}
